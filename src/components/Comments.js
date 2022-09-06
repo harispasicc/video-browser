@@ -8,6 +8,7 @@ function Comments({ video, onVideoSelect }) {
   useEffect(() => {
     const getData = async () => {
       if (video) {
+        console.log(video);
         const {
           data: { items: comments },
         } = await youTube.get(

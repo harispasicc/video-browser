@@ -22,6 +22,7 @@ function Video() {
     });
 
     setVideos(videos);
+    console.log(videos);
     setSelectedVideo(videos[0]);
   };
 
