@@ -22,12 +22,11 @@ function Video() {
     });
 
     setVideos(videos);
-    console.log(videos);
     setSelectedVideo(videos[0]);
   };
 
   if (!selectedVideo.id.videoId) {
-    handleSubmit("football");
+    handleSubmit("programming");
   }
 
   return (

@@ -4,8 +4,8 @@ import CommentItem from "./CommentItem";
 function CommentList({ comments, onVideoSelect }) {
   const listOfComments = comments.map(comment => (
     <CommentItem
-      key={comment.id.videoId}
-      comment={comment}
+      key={comment.id}
+      comment={comment.snippet.topLevelComment.snippet}
       onVideoSelect={onVideoSelect}
     />
   ));

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import youTube from "../api/youTube";
 import CommentList from "./CommentList";
+import CommentAnalyze from "./CommentAnalyze";
 
 function Comments({ video, onVideoSelect }) {
   const [comments, setComments] = useState([]);
@@ -8,7 +9,6 @@ function Comments({ video, onVideoSelect }) {
   useEffect(() => {
     const getData = async () => {
       if (video) {
-        console.log(video);
         const {
           data: { items: comments },
         } = await youTube.get(
@@ -43,11 +43,9 @@ function Comments({ video, onVideoSelect }) {
   return (
     <div>
       <div>
-        <button style={{ marginTop: 10 }} className="ui button">
-          Analyze Comments
-        </button>
+        <CommentAnalyze comments={comments} />
         <div className="ui segment">
-          <h4 className="ui header">Comments</h4>
+          <div className="ui header">Comments</div>
           <CommentList comments={comments} onVideoSelect={onVideoSelect} />
         </div>
       </div>

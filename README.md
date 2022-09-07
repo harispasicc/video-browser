@@ -1,3 +1,37 @@
+Video-Browser
+
+Project description:
+
+The Video Browser with Comment Analysis is an online application for searching and watching videos that correspond to the search term. The videos are retrieved from YouTube. It is accessed via a browser.
+The website must work correctly in both Coogle Chrome and Mozilla Firefox. As stated by the customer, there are no hardware or software requirements beyond these including, but not limited to, memory or
+specific software packages that need to be utilized nor software packages that need not be utilized.
+
+Project features:
+
+youTube.js: with the URL and API
+
+VideoItem: video items (title, description, channelTitle)
+
+VideoDetils: Good and Cheap venn diagram with text
+
+VideoList: imported videoItem and mapped
+
+Video: main logic with the three circles on the main page
+
+Comments: main logic for comments
+
+CommentItem: comment items (image, text, likes, date)
+
+CommentList: imported commentItem and mapped
+
+App.js: Routes of all components
+
+For CSS we have used Semantic UI
+
+Built with:
+
+-HTML -CSS(Semantic UI) -JS -React JS -YouTubeAPI
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
