@@ -1,12 +1,9 @@
 import React from "react";
-import { useState } from "react";
 import Sentiment from "sentiment";
 
 const sentiment = new Sentiment();
 
-function CommentAnalyze({ comments }) {
-  const [sort, setSort] = useState("");
-
+function CommentAnalyze({ comments, sort, setSort }) {
   const handleAnalyze = () => {
     const commentText = () => {
       return comments.map(

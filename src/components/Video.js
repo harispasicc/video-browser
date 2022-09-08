@@ -4,6 +4,7 @@ import VideoList from "./VideoList";
 import VideoDetail from "./VideoDetail";
 import youTube from "../api/youTube";
 import Comments from "./Comments";
+import { useEffect } from "react";
 
 function Video() {
   const [videos, setVideos] = useState([]);
@@ -25,9 +26,12 @@ function Video() {
     setSelectedVideo(videos[0]);
   };
 
-  if (!selectedVideo.id.videoId) {
-    handleSubmit("programming");
-  }
+  useEffect(() => {
+    if (!selectedVideo.id.videoId) {
+      handleSubmit("programming");
+    }
+    //eslint-disable-next-line
+  }, []);
 
   return (
     <div>

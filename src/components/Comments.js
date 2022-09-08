@@ -5,6 +5,7 @@ import CommentAnalyze from "./CommentAnalyze";
 
 function Comments({ video, onVideoSelect }) {
   const [comments, setComments] = useState([]);
+  const [sort, setSort] = useState([]);
 
   useEffect(() => {
     const getData = async () => {
@@ -38,12 +39,13 @@ function Comments({ video, onVideoSelect }) {
       console.log(e);
       setComments([]);
     });
+    setSort([]);
   }, [video]);
 
   return (
     <div>
       <div>
-        <CommentAnalyze comments={comments} />
+        <CommentAnalyze comments={comments} sort={sort} setSort={setSort} />
         <div className="ui segment">
           <div className="ui header">Comments</div>
           <CommentList comments={comments} onVideoSelect={onVideoSelect} />
