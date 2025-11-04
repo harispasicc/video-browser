@@ -2,6 +2,10 @@ import React from "react";
 import CommentItem from "./CommentItem";
 
 function CommentList({ comments, onVideoSelect }) {
+  if (!comments || comments.length === 0) {
+    return null;
+  }
+
   const listOfComments = comments.map(comment => (
     <CommentItem
       key={comment.id}

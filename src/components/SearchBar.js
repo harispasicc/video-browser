@@ -16,16 +16,18 @@ function SearchBar({ onSubmit }) {
     <div className="search-bar ui segment">
       <form className="ui form" onSubmit={handleSubmit}>
         <div className="field">
-          <label htmlFor="video-search">
+          <label htmlFor="video-search" className="search-label">
             <i className="youtube icon red large" />
-            YouTube
+            YouTube Video Browser
+            <span className="youtube-text">YouTube</span>
           </label>
           <input
             type="text"
-            placeholder="Search"
+            placeholder="Search for videos..."
             onChange={handleChange}
             value={input}
             name="video-search"
+            className="search-input"
           />
         </div>
       </form>

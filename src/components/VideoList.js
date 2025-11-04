@@ -2,9 +2,13 @@ import React from "react";
 import VideoItem from "./VideoItem";
 
 function VideoList({ videos, onVideoSelect }) {
-  const listOfVideos = videos.map(video => (
+  if (!videos || videos.length === 0) {
+    return null;
+  }
+
+  const listOfVideos = videos.map((video, index) => (
     <VideoItem
-      key={video.id.videoId}
+      key={video.id?.videoId || `video-${index}`}
       video={video}
       onVideoSelect={onVideoSelect}
     />
